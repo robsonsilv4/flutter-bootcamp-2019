@@ -1,19 +1,38 @@
-## I Am Rich (Flutter)
+# Curso de Flutter 2019 — Aplicativos
 
-Versão do aplicativo [I Am Rich](https://en.wikipedia.org/wiki/I_Am_Rich) desenvolvida com [Flutter](https://flutter.dev/) para estudos.
+Sete aplicativos desenvolvidos durante o curso de Flutter de 2019
+("Flutter Development Bootcamp"), unificados neste repositório.
 
-## Imagens
+## Aplicativos
 
-![alt text](https://github.com/robsonsilv4/iAmRichFlutter/raw/master/01.png "Icone da aplicação")
-![alt text](https://github.com/robsonsilv4/iAmRichFlutter/raw/master/02.png "Tela da aplicação")
+| App | Pasta | O que faz |
+|---|---|---|
+| [I Am Rich](apps) | raiz | Versão Flutter do app "I Am Rich" |
+| [MiCard](apps/mi-card) | `apps/mi-card` | Cartão de apresentação profissional |
+| [Dicee](apps/dicee) | `apps/dicee` | Lançamento de dados com controle de estado |
+| [Magic 8 Ball](apps/magic-8-ball) | `apps/magic-8-ball` | Respostas aleatórias para perguntas |
+| [Xylophone](apps/xylophone) | `apps/xylophone` | Instrumento com sons |
+| [Quizzler](apps/quizzler) | `apps/quizzler` | Quiz com pontuação |
+| [BMI Calculator](apps/bmi-calculator) | `apps/bmi-calculator` | Calculadora de IMC |
+
+Datas e contexto do curso em [NOTAS.md](NOTAS.md).
+
+## Como rodar
+
+Cada app em `apps/` (e o app na raiz) é um projeto Flutter independente:
+
+```bash
+cd apps/<pasta-do-app>
+flutter pub get
+flutter run
+```
 
 ## Feito com
 
-* [Dart](https://dart.dev/)
-* [Flutter](https://flutter.dev/)
-* [Material Design](https://material.io/)
-* [Android Studio](https://developer.android.com/studio)
+- [Flutter](https://flutter.dev/)
+- [Dart](https://dart.dev/)
+- [Material Design](https://material.io/)
 
 ## Autor
 
-* **Robson Silva** - *Trabalho inicial* - [robsonsilv4](https://github.com/robsonsilv4)
+- **Robson Silva** — [robsonsilv4](https://github.com/robsonsilv4)
