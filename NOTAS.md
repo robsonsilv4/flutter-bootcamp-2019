@@ -1,30 +1,30 @@
-# Notas — Curso de Flutter 2019
+# Course Notes — Flutter 2019
 
-Este repositório unifica os sete aplicativos desenvolvidos durante o curso de
-Flutter de 2019 (rota "Flutter Development Bootcamp"). Cada app vive em uma
-subpasta de `apps/`, com o código-fonte preservado do repositório original.
+This repository unifies the seven applications built during the 2019 Flutter
+course ("Flutter Development Bootcamp"). Each app lives in a subfolder under
+`apps/`, with the source code preserved from its original repository.
 
-## Aplicativos
+## Applications
 
-| App | Pasta | O que faz | Criado em | Último commit |
+| App | Folder | What it does | Created | Last commit |
 |---|---|---|---|---|
-| I Am Rich | raiz | Versão Flutter do app "I Am Rich" (fim do módulo introdutório) | 2019-07-05 | 2019-07-05 |
-| MiCard | `apps/mi-card` | Cartão de apresentação profissional | 2019-07-07 | 2019-07-07 |
-| Dicee | `apps/dicee` | Lançamento de dados com controle de estado | 2019-07-08 | 2019-07-08 |
-| Magic 8 Ball | `apps/magic-8-ball` | Respostas aleatórias para perguntas | 2019-07-09 | 2019-07-09 |
-| Xylophone | `apps/xylophone` | Instrumento com sons (pacote `audioplayers`) | 2019-07-10 | 2019-07-10 |
-| Quizzler | `apps/quizzler` | Quiz com pontuação (estado de tela) | 2019-07-11 | 2019-07-11 |
-| BMI Calculator | `apps/bmi-calculator` | Calculadora de IMC (layout + navegação) | 2019-07-12 | 2019-07-21 |
+| I Am Rich | root | Flutter version of the "I Am Rich" app (end of the intro module) | 2019-07-05 | 2019-07-05 |
+| MiCard | `apps/mi-card` | Professional business card | 2019-07-07 | 2019-07-07 |
+| Dicee | `apps/dicee` | Dice roller with state management | 2019-07-08 | 2019-07-08 |
+| Magic 8 Ball | `apps/magic-8-ball` | Random answers to questions | 2019-07-09 | 2019-07-09 |
+| Xylophone | `apps/xylophone` | Sound instrument (via `audioplayers`) | 2019-07-10 | 2019-07-10 |
+| Quizzler | `apps/quizzler` | Quiz with scoring (screen state) | 2019-07-11 | 2019-07-11 |
+| BMI Calculator | `apps/bmi-calculator` | BMI calculator (layout + navigation) | 2019-07-12 | 2019-07-21 |
 
-## Histórico
+## History
 
-Todos os sete apps foram desenvolvidos no período de 05 a 21 de julho de 2019,
-na ordem da tabela acima, seguindo a progressão de conceitos do curso
-(primeiros widgets → controle de estado → dependências → navegação).
+All seven apps were developed between July 5 and 21, 2019, in the order shown
+in the table above, following the course's concept progression (first widgets →
+state management → dependencies → navigation).
 
-## Origem
+## Origin
 
-Antes da unificação (2026-08-02), cada app era um repositório separado:
+Before the unification (2026-08-02), each app was a separate repository:
 
 - `robsonsilv4/IAmRichFlutter`
 - `robsonsilv4/MiCard`
@@ -34,5 +34,5 @@ Antes da unificação (2026-08-02), cada app era um repositório separado:
 - `robsonsilv4/QuizzlerFlutter`
 - `robsonsilv4/bmi-calculator`
 
-Os repositórios foram esvaziados e removidos; o código permanece preservado
-nesta estrutura.
+Those repositories were emptied and removed; the code remains preserved in this
+structure.
