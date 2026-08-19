@@ -8,7 +8,7 @@ course ("Flutter Development Bootcamp"). Each app lives in a subfolder under
 
 | App | Folder | What it does | Created | Last commit |
 |---|---|---|---|---|
-| I Am Rich | root | Flutter version of the "I Am Rich" app (end of the intro module) | 2019-07-05 | 2019-07-05 |
+| I Am Rich | `apps/i-am-rich` | Flutter version of the "I Am Rich" app (end of the intro module) | 2019-07-05 | 2019-07-05 |
 | MiCard | `apps/mi-card` | Professional business card | 2019-07-07 | 2019-07-07 |
 | Dicee | `apps/dicee` | Dice roller with state management | 2019-07-08 | 2019-07-08 |
 | Magic 8 Ball | `apps/magic-8-ball` | Random answers to questions | 2019-07-09 | 2019-07-09 |

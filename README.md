@@ -7,7 +7,7 @@ Sete aplicativos desenvolvidos durante o curso de Flutter de 2019
 
 | App | Pasta | O que faz |
 |---|---|---|
-| [I Am Rich](apps) | raiz | Versão Flutter do app "I Am Rich" |
+| [I Am Rich](apps/i-am-rich) | `apps/i-am-rich` | Versão Flutter do app "I Am Rich" |
 | [MiCard](apps/mi-card) | `apps/mi-card` | Cartão de apresentação profissional |
 | [Dicee](apps/dicee) | `apps/dicee` | Lançamento de dados com controle de estado |
 | [Magic 8 Ball](apps/magic-8-ball) | `apps/magic-8-ball` | Respostas aleatórias para perguntas |
@@ -19,7 +19,7 @@ Datas e contexto do curso em [NOTAS.md](NOTAS.md).
 
 ## Como rodar
 
-Cada app em `apps/` (e o app na raiz) é um projeto Flutter independente:
+Cada app em `apps/` é um projeto Flutter independente:
 
 ```bash
 cd apps/<pasta-do-app>
