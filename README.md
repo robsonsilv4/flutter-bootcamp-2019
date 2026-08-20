@@ -11,23 +11,22 @@ this repository.
 
 | App | What it does |
 |---|---|
-| [I Am Rich](apps/i-am-rich) | Flutter version of the "I Am Rich" app |
-| [MiCard](apps/mi-card) | Professional business card |
-| [Dicee](apps/dicee) | Dice roller with state management |
+| [I Am Rich](apps/i-am-rich) | Flutter version of the "I Am Rich" app (intro) |
+| [MiCard](apps/mi-card) | Professional business card (layout) |
+| [Dicee](apps/dicee) | Dice roller (state management) |
 | [Magic 8 Ball](apps/magic-8-ball) | Random answers to questions |
-| [Xylophone](apps/xylophone) | Sound instrument |
-| [Quizzler](apps/quizzler) | Quiz with scoring |
-| [BMI Calculator](apps/bmi-calculator) | BMI calculator |
+| [Xylophone](apps/xylophone) | Plays sounds on tap via `audioplayers` (dependencies) |
+| [Quizzler](apps/quizzler) | Quiz with scoring (code organization) |
+| [BMI Calculator](apps/bmi-calculator) | BMI calculator with sliders (layout + navigation) |
 
 Each app in `apps/` is an independent Flutter project. Course dates and context
 in [NOTES.md](NOTES.md).
 
-## Maintenance (2026-08)
+## Recent changes
 
 In August 2026 all seven apps were migrated to null safety and Material 3:
-dependencies upgraded, legacy widgets replaced, visible bugs fixed, and unit
-and widget tests added. Each app runs on the current Flutter version. Details
-per app in [NOTES.md](NOTES.md#2026-update).
+dependencies upgraded, legacy widgets replaced, bugs fixed, and unit and
+widget tests added. Details per app in [NOTES.md](NOTES.md#2026-update).
 
 ## How to run
 
@@ -48,13 +47,18 @@ flutter test
 
 - [Flutter](https://flutter.dev/)
 - [Dart](https://dart.dev/)
-- [Material Design](https://material.io/)
+- [Material Design](https://m3.material.io/)
 
 ## Acknowledgments
 
 Apps built following the [Complete Flutter Development Bootcamp with
 Dart](https://www.udemy.com/course/flutter-bootcamp-with-dart/) by
 [Angela Yu](https://github.com/angelabauer).
+
+## License
+
+[MIT](LICENSE) for the source code. Course assets are excluded — see
+[NOTICE](NOTICE.md).
 
 ## Author
 

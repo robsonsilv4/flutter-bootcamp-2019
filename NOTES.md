@@ -38,7 +38,7 @@ structure.
 
 - 2026-08-02: seven apps unified into this repository.
 - 2026-08-19/20: every app migrated to null safety and Material 3 (SDK
-  constraint Dart >=3.12; `FlatButton` replaced; `audioplayers` 0.13 → 6,
+  constraint Dart >=3.12; `FlatButton` replaced; `audioplayers` 0.13 → 6.8.1,
   `rflutter_alert` 1 → 2, `font_awesome_flutter` 8 → 11); visible bugs fixed;
   unit and widget tests added.
 - Repository renamed `IAmRichFlutter` → `flutter-bootcamp-2019`.
