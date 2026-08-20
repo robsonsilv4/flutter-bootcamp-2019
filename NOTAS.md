@@ -36,3 +36,13 @@ Before the unification (2026-08-02), each app was a separate repository:
 
 Those repositories were emptied and removed; the code remains preserved in this
 structure.
+
+## 2026 update
+
+On 2026-08-02 all seven apps were unified into this repository (see Origin
+above). On 2026-08-19/20 every app was migrated to null safety and Material 3:
+SDK constraint raised to Dart >=3.12, deprecated widgets replaced (e.g.
+`FlatButton`), dependencies upgraded (e.g. `audioplayers` 0.13 → 6,
+`rflutter_alert` 1 → 2, `font_awesome_flutter` 8 → 11), a few visible bugs
+fixed, and unit and widget tests added. The repository was renamed from
+`IAmRichFlutter` to `flutter-bootcamp-2019`.
