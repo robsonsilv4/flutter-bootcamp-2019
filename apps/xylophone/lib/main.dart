@@ -1,25 +1,25 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:audioplayers/audio_cache.dart';
 
 void main() {
-  runApp(XylophoneApp());
+  runApp(const XylophoneApp());
 }
 
 class XylophoneApp extends StatelessWidget {
-  final player = AudioCache();
+  const XylophoneApp({super.key});
 
-  void playSound(int number) {
-    player.play('note$number.wav');
+  Future<void> _playSound(int number) async {
+    final player = AudioPlayer();
+    await player.play(AssetSource('note$number.wav'));
   }
 
-  Expanded buildKey({int sound, Color color}) {
+  Widget _buildKey({required int sound, required Color color}) {
     return Expanded(
-      child: FlatButton(
+      child: Material(
         color: color,
-        onPressed: () {
-          playSound(sound);
-        },
-        child: null,
+        child: InkWell(
+          onTap: () => _playSound(sound),
+        ),
       ),
     );
   }
@@ -27,19 +27,25 @@ class XylophoneApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Xylophone',
+      theme: ThemeData(
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.purple),
+      ),
       home: Scaffold(
         backgroundColor: Colors.black,
         body: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              buildKey(sound: 1, color: Colors.red),
-              buildKey(sound: 2, color: Colors.orange),
-              buildKey(sound: 3, color: Colors.yellow),
-              buildKey(sound: 4, color: Colors.green),
-              buildKey(sound: 5, color: Colors.teal),
-              buildKey(sound: 6, color: Colors.blue),
-              buildKey(sound: 7, color: Colors.purple),
+            children: [
+              _buildKey(sound: 1, color: Colors.red),
+              _buildKey(sound: 2, color: Colors.orange),
+              _buildKey(sound: 3, color: Colors.yellow),
+              _buildKey(sound: 4, color: Colors.green),
+              _buildKey(sound: 5, color: Colors.teal),
+              _buildKey(sound: 6, color: Colors.blue),
+              _buildKey(sound: 7, color: Colors.purple),
             ],
           ),
         ),
