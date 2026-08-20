@@ -23,9 +23,9 @@ class Quizzler extends StatelessWidget {
           brightness: Brightness.dark,
         ),
       ),
-      home: const Scaffold(
-        backgroundColor: Colors.grey,
-        body: SafeArea(
+      home: Scaffold(
+        backgroundColor: Colors.grey.shade900,
+        body: const SafeArea(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 10),
             child: QuizPage(),
@@ -81,6 +81,16 @@ class _QuizPageState extends State<QuizPage> {
         context: context,
         title: 'Finished Game!',
         desc: 'Play Again.',
+        style: const AlertStyle(
+          titleStyle: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w500,
+          ),
+          descStyle: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w400,
+          ),
+        ),
         buttons: [
           DialogButton(
             onPressed: () => Navigator.pop(context),
