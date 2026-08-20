@@ -1,6 +1,6 @@
 class Question {
-  String question;
-  bool answer;
+  const Question(this.question, {required this.answer});
 
-  Question(this.question, this.answer);
+  final String question;
+  final bool answer;
 }
