@@ -1,8 +1,8 @@
 # Course Notes — Flutter 2019
 
-This repository unifies the seven applications built during the 2019 Flutter
-course ("Flutter Development Bootcamp"). Each app lives in a subfolder under
-`apps/`, with the source code preserved from its original repository.
+Seven apps from the 2019 Flutter course ("Flutter Development Bootcamp"),
+unified in this repository. Each app lives in a subfolder under `apps/`,
+source code preserved from its original repository.
 
 ## Applications
 
@@ -16,15 +16,12 @@ course ("Flutter Development Bootcamp"). Each app lives in a subfolder under
 | Quizzler | `apps/quizzler` | Quiz with scoring (screen state) | 2019-07-11 | 2019-07-11 |
 | BMI Calculator | `apps/bmi-calculator` | BMI calculator (layout + navigation) | 2019-07-12 | 2019-07-21 |
 
-## History
-
-All seven apps were developed between July 5 and 21, 2019, in the order shown
-in the table above, following the course's concept progression (first widgets →
-state management → dependencies → navigation).
+Developed 2019-07-05 → 2019-07-21, following the course progression (first
+widgets → state management → dependencies → navigation).
 
 ## Origin
 
-Before the unification (2026-08-02), each app was a separate repository:
+Before the unification (2026-08-02), each app was its own repository:
 
 - `robsonsilv4/IAmRichFlutter`
 - `robsonsilv4/MiCard`
@@ -34,23 +31,19 @@ Before the unification (2026-08-02), each app was a separate repository:
 - `robsonsilv4/QuizzlerFlutter`
 - `robsonsilv4/bmi-calculator`
 
-Those repositories were emptied and removed; the code remains preserved in this
+Those repositories were emptied and removed; the code lives on in this
 structure.
 
 ## 2026 update
 
-On 2026-08-02 all seven apps were unified into this repository (see Origin
-above). On 2026-08-19/20 every app was migrated to null safety and Material 3:
-SDK constraint raised to Dart >=3.12, deprecated widgets replaced (e.g.
-`FlatButton`), dependencies upgraded (e.g. `audioplayers` 0.13 → 6,
-`rflutter_alert` 1 → 2, `font_awesome_flutter` 8 → 11), a few visible bugs
-fixed, and unit and widget tests added. The repository was renamed from
-`IAmRichFlutter` to `flutter-bootcamp-2019`.
+- 2026-08-02: seven apps unified into this repository.
+- 2026-08-19/20: every app migrated to null safety and Material 3 (SDK
+  constraint Dart >=3.12; `FlatButton` replaced; `audioplayers` 0.13 → 6,
+  `rflutter_alert` 1 → 2, `font_awesome_flutter` 8 → 11); visible bugs fixed;
+  unit and widget tests added.
+- Repository renamed `IAmRichFlutter` → `flutter-bootcamp-2019`.
 
 ### Migration per app
-
-Each migration landed as its own pull request, with tests added and the app
-validated on a current Flutter version:
 
 | App | PR | Key changes | Tests |
 |---|---|---|---|
@@ -64,14 +57,11 @@ validated on a current Flutter version:
 
 ## How to verify
 
-For each app, the maintenance status is validated with:
-
 ```bash
 cd apps/<app-folder>
 flutter analyze   # 0 issues
 flutter test      # all tests pass
 ```
 
-Note: the BMI Calculator widget tests need a phone-sized viewport (1080x2340
-@3); `test/helpers/pump_app.dart` already sets it, so the tests run without
-extra configuration.
+BMI Calculator widget tests need a phone-sized viewport (1080x2340 @3);
+`test/helpers/pump_app.dart` already sets it.
