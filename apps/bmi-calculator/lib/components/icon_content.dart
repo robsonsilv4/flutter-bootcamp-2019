@@ -1,24 +1,28 @@
+import 'package:bmi_calculator/constants.dart';
 import 'package:flutter/material.dart';
-
-import '../constants.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class IconContent extends StatelessWidget {
-  final IconData icon;
-  final String text;
+  const IconContent({
+    required this.icon,
+    required this.text,
+    super.key,
+  });
 
-  IconContent({@required this.icon, @required this.text});
+  final FaIconData icon;
+  final String text;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Icon(
+      children: [
+        FaIcon(
           icon,
-          size: 80.0,
+          size: 80,
         ),
-        SizedBox(
-          height: 15.0,
+        const SizedBox(
+          height: 15,
         ),
         Text(
           text,

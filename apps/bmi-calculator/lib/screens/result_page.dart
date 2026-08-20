@@ -4,30 +4,31 @@ import 'package:bmi_calculator/constants.dart';
 import 'package:flutter/material.dart';
 
 class ResultPage extends StatelessWidget {
+  const ResultPage({
+    required this.bmiResult,
+    required this.resultText,
+    required this.interpretation,
+    super.key,
+  });
+
   final String bmiResult;
   final String resultText;
   final String interpretation;
-
-  ResultPage(
-      {@required this.bmiResult,
-      @required this.resultText,
-      @required this.interpretation});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('BMI CALCULATOR'),
+        title: const Text('BMI CALCULATOR'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
+        children: [
           Expanded(
             child: Container(
-              padding: EdgeInsets.all(15.0),
+              padding: const EdgeInsets.all(15),
               alignment: Alignment.bottomLeft,
-              child: Text(
+              child: const Text(
                 'Your Result',
                 style: kTitleTextStyle,
               ),
@@ -39,8 +40,7 @@ class ResultPage extends StatelessWidget {
               color: kActiveCardColor,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
+                children: [
                   Text(
                     resultText.toUpperCase(),
                     style: kResultTextStyle,
@@ -53,7 +53,7 @@ class ResultPage extends StatelessWidget {
                     interpretation,
                     textAlign: TextAlign.center,
                     style: kBodyTextStyle,
-                  )
+                  ),
                 ],
               ),
             ),
@@ -63,7 +63,7 @@ class ResultPage extends StatelessWidget {
             onTap: () {
               Navigator.pop(context);
             },
-          )
+          ),
         ],
       ),
     );
