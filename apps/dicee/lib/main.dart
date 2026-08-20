@@ -1,32 +1,47 @@
 import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() {
-  return runApp(MaterialApp(
-    home: Scaffold(
-      appBar: AppBar(
-        title: Text('Dicee'),
-        backgroundColor: Colors.red,
+  runApp(const DiceeApp());
+}
+
+class DiceeApp extends StatelessWidget {
+  const DiceeApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Dicee',
+      theme: ThemeData(
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
       ),
-      backgroundColor: Colors.red,
-      body: DicePage(),
-    ),
-  ));
+      home: Scaffold(
+        appBar: AppBar(title: const Text('Dicee')),
+        backgroundColor: Colors.red,
+        body: const DicePage(),
+      ),
+    );
+  }
 }
 
 class DicePage extends StatefulWidget {
+  const DicePage({super.key});
+
   @override
-  _DicePageState createState() => _DicePageState();
+  State<DicePage> createState() => _DicePageState();
 }
 
 class _DicePageState extends State<DicePage> {
-  int leftDice = Random().nextInt(6) + 1;
-  int rightDice = Random().nextInt(6) + 1;
+  int _leftDice = Random().nextInt(6) + 1;
+  int _rightDice = Random().nextInt(6) + 1;
 
-  void changeDices() {
+  void _rollDices() {
     setState(() {
-      leftDice = Random().nextInt(6) + 1;
-      rightDice = Random().nextInt(6) + 1;
+      _leftDice = Random().nextInt(6) + 1;
+      _rightDice = Random().nextInt(6) + 1;
     });
   }
 
@@ -34,21 +49,19 @@ class _DicePageState extends State<DicePage> {
   Widget build(BuildContext context) {
     return Center(
       child: Row(
-        children: <Widget>[
+        children: [
           Expanded(
-              child: FlatButton(
-            child: Image.asset('images/dice$leftDice.png'),
-            onPressed: () {
-              changeDices();
-            },
-          )),
+            child: InkWell(
+              onTap: _rollDices,
+              child: Image.asset('images/dice$_leftDice.png'),
+            ),
+          ),
           Expanded(
-              child: FlatButton(
-            child: Image.asset('images/dice$rightDice.png'),
-            onPressed: () {
-              changeDices();
-            },
-          ))
+            child: InkWell(
+              onTap: _rollDices,
+              child: Image.asset('images/dice$_rightDice.png'),
+            ),
+          ),
         ],
       ),
     );
