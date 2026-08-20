@@ -46,3 +46,32 @@ SDK constraint raised to Dart >=3.12, deprecated widgets replaced (e.g.
 `rflutter_alert` 1 → 2, `font_awesome_flutter` 8 → 11), a few visible bugs
 fixed, and unit and widget tests added. The repository was renamed from
 `IAmRichFlutter` to `flutter-bootcamp-2019`.
+
+### Migration per app
+
+Each migration landed as its own pull request, with tests added and the app
+validated on a current Flutter version:
+
+| App | PR | Key changes | Tests |
+|---|---|---|---|
+| i-am-rich | #3 | null safety + Material 3; platforms regenerated | 2 |
+| mi-card | #4 | avatar initials "RS"; "DJANGO" → "DART" | 2 |
+| dicee | #5 | `FlatButton` → `InkWell` | 3 |
+| magic-8-ball | #6 | `FlatButton` → `InkWell` | 3 |
+| xylophone | #7 | `audioplayers` 0.13 → 6.8.1 | 2 |
+| quizzler | #8 | `rflutter_alert` 1.0.3 → 2.0.7; score icons and dialog contrast fixed | 8 |
+| bmi-calculator | #9 | `font_awesome_flutter` → 11; `flutter_launcher_icons` removed; "nornal" typo fixed; HEIGHT slider overflow fixed | 7 |
+
+## How to verify
+
+For each app, the maintenance status is validated with:
+
+```bash
+cd apps/<app-folder>
+flutter analyze   # 0 issues
+flutter test      # all tests pass
+```
+
+Note: the BMI Calculator widget tests need a phone-sized viewport (1080x2340
+@3); `test/helpers/pump_app.dart` already sets it, so the tests run without
+extra configuration.
