@@ -1,42 +1,60 @@
-import 'package:flutter/material.dart';
 import 'dart:math';
 
+import 'package:flutter/material.dart';
+
 void main() {
-  runApp(MaterialApp(
-    home: Scaffold(
-      appBar: AppBar(
-        title: Text('Ask me Anything'),
-        backgroundColor: Colors.blue.shade900,
+  runApp(const Magic8BallApp());
+}
+
+class Magic8BallApp extends StatelessWidget {
+  const Magic8BallApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Magic 8 Ball',
+      theme: ThemeData(
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.blue,
+          brightness: Brightness.dark,
+        ),
       ),
-      backgroundColor: Colors.blue,
-      body: BallPage(),
-    ),
-  ));
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Ask me Anything'),
+          backgroundColor: Colors.blue.shade900,
+        ),
+        backgroundColor: Colors.blue,
+        body: const BallPage(),
+      ),
+    );
+  }
 }
 
 class BallPage extends StatefulWidget {
+  const BallPage({super.key});
+
   @override
-  _BallPageState createState() => _BallPageState();
+  State<BallPage> createState() => _BallPageState();
 }
 
 class _BallPageState extends State<BallPage> {
-  // Começa com Ask Again Later
-  int ball = 3;
+  int _ball = 3;
 
-  void changeBall() {
+  void _changeBall() {
     setState(() {
-      ball = Random().nextInt(5) + 1;
+      _ball = Random().nextInt(5) + 1;
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: FlatButton(
-        child: Image.asset('images/ball$ball.png'),
-        onPressed: () {
-          changeBall();
-        },
+      child: InkWell(
+        onTap: _changeBall,
+        child: Image.asset('images/ball$_ball.png'),
       ),
     );
   }
