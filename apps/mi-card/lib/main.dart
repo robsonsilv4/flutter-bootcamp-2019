@@ -39,7 +39,7 @@ class MiCardApp extends StatelessWidget {
                 ),
               ),
               Text(
-                'DJANGO & FLUTTER DEVELOPER',
+                'DART & FLUTTER DEVELOPER',
                 style: TextStyle(
                   fontFamily: 'Source Sans Pro',
                   fontSize: 18,
