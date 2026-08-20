@@ -1,21 +1,23 @@
 name: magic_8_ball
-description: A new Flutter project.
+description: A magic 8 ball fortune app built with Flutter.
+publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=3.12.0 <4.0.0"
 
 dependencies:
+  cupertino_icons: ^1.0.9
   flutter:
     sdk: flutter
-
-  cupertino_icons: ^0.1.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  very_good_analysis: ^10.3.0
 
 flutter:
   uses-material-design: true
+
   assets:
     - images/
